@@ -14,12 +14,11 @@
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
-      /* 預設橫向背景圖 */
       background-image: url('https://github.com/Simple0223/MadelineBirthday/blob/main/hbg.jpg?raw=true');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed; /* ✅ 讓背景固定不動 */
+      background-attachment: fixed;
       
       display: flex;
       flex-direction: column;
@@ -36,7 +35,7 @@
     @media (orientation: portrait) {
       body {
         background-image: url('https://github.com/Simple0223/MadelineBirthday/blob/main/vbg.jpg?raw=true');
-        background-attachment: fixed; /* ✅ 確保直向也固定背景 */
+        background-attachment: fixed;
       }
     }
 
@@ -49,9 +48,10 @@
     }
 
     img {
-      width: 100%;
+      width: 90%;
+      border-radius: 12px;
+      margin-bottom: 5vw;
       max-width: 600px;
-      margin-bottom: 30px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
       border-radius: 8px;
     }
