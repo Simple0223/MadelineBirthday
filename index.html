@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>允鵝の卡片</title>
-<style>
-  html, body {
-    margin: 0; padding: 0;
-    height: 100%;
-  }
-  body {
-    /* 預設橫向背景圖 */
-    background-image: url('https://github.com/Simple0223/MadelineBirthday/blob/main/hbg.jpg?raw=true');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    min-height: 100vh;
-    padding: 20px;
-    font-family: "微軟正黑體", sans-serif;
-    color: white;
-    text-shadow: 0 0 8px rgba(0,0,0,0.8);
-  }
-
-  /* 直向時換直的背景圖 */
-  @media (orientation: portrait) {
-    body {
-      background-image: url('https://github.com/Simple0223/MadelineBirthday/blob/main/vbg.jpg?raw=true');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>允鵝の卡片</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
-  }
+    body {
+      /* 預設橫向背景圖 */
+      background-image: url('https://yourdomain.com/horizontal-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* ✅ 讓背景固定不動 */
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: "微軟正黑體", sans-serif;
+      color: white;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    }
 
-  h1 {
-    margin-bottom: 30px;
-  }
+    @media (orientation: portrait) {
+      body {
+        background-image: url('https://yourdomain.com/vertical-background.jpg');
+        background-attachment: fixed; /* ✅ 確保直向也固定背景 */
+      }
+    }
 
-  h2 {
-    margin: 20px 0 10px 0;
-  }
+    h1 {
+      margin-bottom: 30px;
+    }
 
-  img {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-    border-radius: 8px;
-  }
-</style>
+    h2 {
+      margin: 20px 0 10px 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
   <h1>允鵝の卡片</h1>
