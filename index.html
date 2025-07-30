@@ -5,21 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>允鵝の卡片</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        img {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px 0;
-        }
+        html, body {
+        margin: 0; padding: 0; height: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        position: relative;
+        font-family: "微軟正黑體", sans-serif;
+        color: #333;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      /* 固定背景容器 */
+      #background {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: url('https://github.com/Simple0223/MadelineBirthday/blob/main/bg.jpg?raw=true') no-repeat center center;
+        background-size: cover;
+        z-index: -2;
+        transition: transform 0.5s ease;
+        filter: brightness(0.8); /* 可調整淡化效果 */
+      }
+      /* 半透明遮罩 */
+      #overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(255,255,255,0.6);
+        z-index: -1;
+      }
+      img {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      }
+      h1, h2 {
+        margin: 8px 0;
+      }
     </style>
 </head>
 <body>
+  <div id="background"></div>
+  <div id="overlay"></div>
+
     <h1>允鵝の卡片</h1>
     <h2>惠琪</h2>
     <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img1.jpg?raw=true" alt="Image 1">
@@ -49,5 +82,20 @@
     <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img13.jpg?raw=true" alt="Image 1">
     <h2>耀中</h2>
     <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img14.jpg?raw=true" alt="Image 1">
+
+    <script>
+      function updateBackgroundRotation() {
+        const bg = document.getElementById('background');
+        const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+        if (isLandscape) {
+          bg.style.transform = "rotate(90deg)";
+        } else {
+          bg.style.transform = "none";
+        }
+      }
+      window.addEventListener("orientationchange", updateBackgroundRotation);
+      window.addEventListener("resize", updateBackgroundRotation);
+      window.addEventListener("load", updateBackgroundRotation);
+    </script>
 </body>
 </html>
