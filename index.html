@@ -1,101 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>允鵝の卡片</title>
-    <style>
-        html, body {
-        margin: 0; padding: 0; height: 100%;
-        overflow-x: hidden;
-      }
-      body {
-        position: relative;
-        font-family: "微軟正黑體", sans-serif;
-        color: #333;
-        text-align: center;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-      }
-      /* 固定背景容器 */
-      #background {
-        position: fixed;
-        top: 0; left: 0; width: 100vw; height: 100vh;
-        background: url('https://github.com/Simple0223/MadelineBirthday/blob/main/bg.jpg?raw=true') no-repeat center center;
-        background-size: cover;
-        z-index: -2;
-        transition: transform 0.5s ease;
-        filter: brightness(0.8); /* 可調整淡化效果 */
-      }
-      /* 半透明遮罩 */
-      #overlay {
-        position: fixed;
-        top: 0; left: 0; width: 100vw; height: 100vh;
-        background: rgba(255,255,255,0.6);
-        z-index: -1;
-      }
-      img {
-        width: 100%;
-        max-width: 600px;
-        margin: 20px 0;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      }
-      h1, h2 {
-        margin: 8px 0;
-      }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>允鵝の卡片</title>
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    height: 100%;
+  }
+  body {
+    /* 預設橫向背景圖 */
+    background-image: url('https://github.com/Simple0223/MadelineBirthday/blob/main/hbg.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: "微軟正黑體", sans-serif;
+    color: white;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  }
+
+  /* 直向時換直的背景圖 */
+  @media (orientation: portrait) {
+    body {
+      background-image: url('https://github.com/Simple0223/MadelineBirthday/blob/main/vbg.jpg?raw=true');
+    }
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    margin: 20px 0 10px 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    border-radius: 8px;
+  }
+</style>
 </head>
 <body>
-  <div id="background"></div>
-  <div id="overlay"></div>
+  <h1>允鵝の卡片</h1>
 
-    <h1>允鵝の卡片</h1>
-    <h2>惠琪</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img1.jpg?raw=true" alt="Image 1">
-    <h2>大恩</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img2.jpg?raw=true" alt="Image 1">
-    <h2>祖平</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img3.jpg?raw=true" alt="Image 1">
-    <h2>昕霖</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img4.jpg?raw=true" alt="Image 1">
-    <h2>姵螢</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img5.jpg?raw=true" alt="Image 1">
-    <h2>芳怡</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img6.jpg?raw=true" alt="Image 1">
-    <h2>佳婕</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img7.jpg?raw=true" alt="Image 1">
-    <h2>舒涵</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img8.jpg?raw=true" alt="Image 1">
+  <h2>惠琪</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img1.jpg?raw=true" alt="惠琪的卡片">
+
+  <h2>大恩</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img2.jpg?raw=true" alt="大恩的卡片">
+
+  <h2>祖平</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img3.jpg?raw=true" alt="祖平的卡片">
+
+  <h2>昕霖</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img4.jpg?raw=true" alt="昕霖的卡片">
+
+  <h2>姵螢</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img5.jpg?raw=true" alt="姵螢的卡片">
+
+  <h2>芳怡</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img6.jpg?raw=true" alt="芳怡的卡片">
+
+  <h2>佳婕</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img7.jpg?raw=true" alt="佳婕的卡片">
+
+  <h2>舒涵</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img8.jpg?raw=true" alt="舒涵的卡片">
+
   <h2>翎瑄</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img9.jpg?raw=true" alt="Image 1">
-    <h2>Vicky</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img10.jpg?raw=true" alt="Image 1">
-    <h2>大能</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img11.jpg?raw=true" alt="Image 1">
-    <h2>櫂維</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img12.jpg?raw=true" alt="Image 1">
-    <h2>瀚陞</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img13.jpg?raw=true" alt="Image 1">
-    <h2>耀中</h2>
-    <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img14.jpg?raw=true" alt="Image 1">
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img9.jpg?raw=true" alt="翎瑄的卡片">
 
-    <script>
-      function updateBackgroundRotation() {
-        const bg = document.getElementById('background');
-        const isLandscape = window.matchMedia("(orientation: landscape)").matches;
-        if (isLandscape) {
-          bg.style.transform = "rotate(90deg)";
-        } else {
-          bg.style.transform = "none";
-        }
-      }
-      window.addEventListener("orientationchange", updateBackgroundRotation);
-      window.addEventListener("resize", updateBackgroundRotation);
-      window.addEventListener("load", updateBackgroundRotation);
-    </script>
+  <h2>Vicky</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img10.jpg?raw=true" alt="Vicky的卡片">
+
+  <h2>大能</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img11.jpg?raw=true" alt="大能的卡片">
+
+  <h2>櫂維</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img12.jpg?raw=true" alt="櫂維的卡片">
+
+  <h2>瀚陞</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img13.jpg?raw=true" alt="瀚陞的卡片">
+
+  <h2>耀中</h2>
+  <img src="https://github.com/Simple0223/MadelineBirthday/blob/main/img14.jpg?raw=true" alt="耀中的卡片">
 </body>
 </html>
